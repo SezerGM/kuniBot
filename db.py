@@ -11,7 +11,7 @@ class Database:
 
     def user_exists(self, user_id):
         with self.connetction:
-            result = self.cursor.execute("SELECT * FROM `users` WHERE `user_id` = ?", (user_id)).fetchall()
+            result = self.cursor.execute("SELECT * FROM `users` WHERE `user_id` = ?", (user_id))
             return bool(len(result))
 
 
@@ -22,7 +22,7 @@ class Database:
 
     def get_signup(self, user_id):
         with self.connetction:
-            result = self.cursor.execute("SELECT`signup` FROM `users` WHERE `users_id` = ?", (user_id)).fetchall()
+            result = self.cursor.execute("SELECT`signup` FROM `users` WHERE `users_id` = ?", (user_id))
             for row in result:
                 signup = str(row[0])
             return signup
