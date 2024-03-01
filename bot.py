@@ -14,7 +14,7 @@ import datetime
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
-db = Database('bot_db.db')
+db = Database('database/bot_db.db')
 
 
 
